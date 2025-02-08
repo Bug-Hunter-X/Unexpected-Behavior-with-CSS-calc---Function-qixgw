@@ -1,0 +1,21 @@
+/* bugSolution.css */
+
+/* Solution for missing parent dimensions: Ensure parent has defined dimensions */
+.container {
+  width: 500px; /* Explicitly define the width of the parent */
+}
+
+.element {
+  width: calc(100% - 20px); /* Now calc() will work reliably */
+}
+
+/* Solution for rounding errors: use consistent units */
+.element2 {
+  width: calc(500px - 20px); /* Use pixels consistently */
+  /* Alternatively, convert units before using calc()*/
+}
+
+/* Solution for unit incompatibility: use compatible units */
+.element3 {
+  width: calc(100% - 2em); /* Use compatible units, e.g. percentage and em*/
+}
